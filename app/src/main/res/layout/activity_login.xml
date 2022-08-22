@@ -60,6 +60,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
             android:imeOptions="actionNext"
             android:imeActionId="1"
             android:maxLines="1"/>
@@ -93,7 +94,7 @@
         android:id="@+id/check_keep_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:checked="true"
+        android:checked="false"
         android:text="@string/login_keep"
         app:layout_constraintEnd_toEndOf="@+id/input_password"
         app:layout_constraintStart_toStartOf="@+id/input_password"
