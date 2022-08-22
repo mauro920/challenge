@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_12"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="120dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/blue"
+            android:layout_marginStart="16dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/str_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="4dp"
+                tools:text="MP"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
+                android:gravity="center"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/name"
+            style="@style/AppWidget.Font.avatar"
+            android:textSize="20sp"
+            android:layout_height="match_parent"
+            tools:text="Mauro Peña"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            />
+
+        <ImageButton
+            android:contentDescription="@string/select_favourite"
+            android:id="@+id/favourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center"
+            android:elevation="0dp"
+            android:backgroundTint="@color/transparent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_baseline_star_outline_24"
+            app:tint="@color/black" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:importantForAccessibility="no"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/AppWidget.Font.title"
+            tools:text="Title "
+            android:layout_marginStart="16dp"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/date"
+            style="@style/AppWidget.Font.date"
+            tools:text="hace 8 horas"
+            android:layout_marginEnd="16dp"
+            android:maxLines="1"
+            android:maxLength="15"
+            android:ellipsize="middle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/description"
+        android:maxLines="3"
+        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rhoncus elit eros, ut interdum est lacinia at. Sed imperdiet quis dolor id sagittis. Proin eu ex eros. Quisque lacinia felis quis molestie auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut ligula luctus, accumsan felis in, rhoncus ante. Morbi dapibus, massa id gravida iaculis, diam nibh eleifend tortor, a finibus nunc mi non ante. Aliquam viverra tellus quis lorem pharetra aliquet. Proin pretium nunc nisl, id rhoncus mauris suscipit eget. Suspendisse id finibus massa. Fusce ultrices libero ante, et viverra magna bibendum eget. Nam id dui diam."
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"/>
+</LinearLayout>
